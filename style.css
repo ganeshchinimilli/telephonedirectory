@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    /* background-color:rgb(250, 244, 244); */
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    align-items: center;    
+    flex-direction:column;
+    justify-content: center;
+    font-family:"Popins",sans-serif;
+    background-color:rgb(243, 200, 222);
+    margin:0;
+    
+}
+.container{
+    background-color: rgb(34, 235, 34);
+    border-radius: 10px;
+    box-shadow: 0 0 10px  5px rgba(22, 22, 22, 0.1);
+    width:500px;
+    max-width:100%;
+    height:600px;
+    overflow:hidden;
+}
+
+.one{
+    padding:1rem;
+
+    color:white;
+    text-align:center;
+    
+    background-color:blue
+}
+.two{
+
+    
+
+    color:white;
+    text-align:center;
+    background-color: aqua;
+    margin-top:1rem;
+    padding-top:1rem;
+    
+    
+}
+.two span{
+    color:black;
+    padding-right: 9rem;
+  
+}
+.two input{
+    height:30px;
+    border-radius: 10px;
+    
+
+}
+.two button{
+    margin-top:20px;
+    width:50px;
+    height:20px;
+    align-items:center;
+    background-color:rgb(64, 104, 5);
+    margin-bottom:1rem;
+    color:#f3f3f3
+}
+.three{   
+     border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    background-color: aqua;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align:center;
+    overflow-y: scroll;  
+    height:350px; 
+    /* overflow-x:hidden; */
+}
+.three::-webkit-scrollbar {
+    display: none;
+  }
+
+.three thead {
+    background-color: #91513e;
+    color: #ffffff;
+    text-align: center;
+ 
+}
+.three th,
+.three td {
+    padding: 12px ;
+    padding-right:86px;  
+    
+}
+
+
+
+.three tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}

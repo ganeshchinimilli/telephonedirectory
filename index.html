@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.1/angular-material.min.css">
+</head>
+
+<body ng-app="app">
+
+    <div ng-controller="myCtrl">
+        <div class="container">
+           <div class="one"> 
+
+                <p>Telephone directory</p>
+           </div>
+
+                <div class="two">
+
+                    <form id="myform">
+                        <div class="form-group">
+                            <span>Name：</span><br>
+                            <input type="text" ng-model="newName" ng-bind="name">
+                        </div>
+                        <div class="form-group">
+                            <span>Phnum:</span><br>
+                            <input type="text" ng-model="newphnum" ng-bind="hello">
+                        </div>
+                        <button type="submit" value="add" ng-click="addItem()" >Add</button>
+                    </form>
+                </div>
+                <div>{{error}}</div>
+                <div class="three">
+                    <table class="main">
+                        <thead>
+                            <tr>
+                                <th ng-click="order='name'" >name</th>
+                                <th ng-click="order='phnum'">Phone Number</th>
+                                <th>Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in data| orderBy:order">
+                                <td>{{x.name}}</td>
+                                <td>{{x.phnum}}</td>
+                                <td><span><button class='button' ng-click="removeItem($index)">Delete</button>
+                                    <button class='button' ng-click="update($index)">update</button></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+            
+</div>
+
+            
+
+
+        </div>
+</body>
+
+</html>
